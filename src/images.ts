@@ -2,7 +2,7 @@ import path from 'path';
 
 import imageSize from 'image-size';
 
-import { ASSETS } from './constants';
+import { ASSETS, ASSETS_PREFIX } from './constants';
 import { Image, Images } from './types';
 
 const calculateSize = (size?: number): number => size ?? 0 / 2;
@@ -16,9 +16,7 @@ const mapImage =
     );
     return {
       name,
-      src: `${
-        process.env.ASSETS_PREFIX ?? ''
-      }/${ASSETS}/${file}?${date.getTime()}`,
+      src: `${ASSETS_PREFIX}${ASSETS}/${file}?${date.getTime()}`,
       width: calculateSize(width),
       height: calculateSize(height),
     };

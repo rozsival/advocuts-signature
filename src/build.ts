@@ -12,6 +12,7 @@ import {
   ADDRESS,
   ASSETS,
   ASSETS_DIR,
+  ASSETS_PREFIX,
   BUILD_DIR,
   CONTAINER,
   MAP_URL,
@@ -55,7 +56,7 @@ export const build = async (): Promise<void> => {
   const htmlWithCss = await inlineCss(html.toString(), {
     removeHtmlSelectors: true,
     removeStyleTags: true,
-    url: `${process.env.ASSETS_PREFIX ?? ''}/`,
+    url: `${ASSETS_PREFIX}/`,
   });
   consola.info('Minifying output');
   const output = minify(htmlWithCss, {
