@@ -16,11 +16,9 @@ const mapImage =
     );
     return {
       name,
-      src: path.join(
-        process.env.ASSETS_PREFIX ?? '',
-        ASSETS,
-        `${file}?${date.getTime()}`,
-      ),
+      src: `${
+        process.env.ASSETS_PREFIX ?? ''
+      }/${ASSETS}/${file}?${date.getTime()}`,
       width: calculateSize(width),
       height: calculateSize(height),
     };
