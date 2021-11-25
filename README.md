@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-Email signature for Advocuts law firm.
+Email signature for Advocuts law firm 👨‍💼
 </p>
 
 ## 👀 Preview
