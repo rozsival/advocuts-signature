@@ -56,7 +56,7 @@ export const build = async (): Promise<void> => {
   const htmlWithCss = await inlineCss(html.toString(), {
     removeHtmlSelectors: true,
     removeStyleTags: true,
-    url: `${ASSETS_PREFIX}/`,
+    url: ASSETS_PREFIX || '/',
   });
   consola.info('Minifying output');
   const output = minify(htmlWithCss, {
