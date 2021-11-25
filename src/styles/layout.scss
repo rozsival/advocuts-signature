@@ -21,7 +21,7 @@ body {
 
 .container {
   border: 1px solid $border-color;
-  border-radius: 1em;
+  border-radius: $border-radius;
   box-sizing: border-box;
   cursor: pointer;
   padding: 2em;
@@ -35,4 +35,11 @@ p {
 p {
   margin-bottom: 2em;
   padding: 0 2em;
+
+  code {
+    background: $border-color;
+    border-radius: $border-radius;
+    margin: auto 0.5em;
+    padding: 0.2em 0.5em;
+  }
 }
