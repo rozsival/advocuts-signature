@@ -30,6 +30,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build
+        env:
+          ASSETS_PREFIX: "https://rozsival.github.io/advocuts-signature/"
         run: yarn build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
