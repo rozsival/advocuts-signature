@@ -16,7 +16,7 @@ const mapImage =
     );
     return {
       name,
-      src: `${ASSETS_PREFIX}${ASSETS}/${file}?${date.getTime()}`,
+      src: `${ASSETS_PREFIX}${ASSETS}/${file}?v=${date.getTime()}`,
       width: calculateSize(width),
       height: calculateSize(height),
     };
