@@ -1,6 +1,7 @@
 .name,
 .job-title,
 .contacts {
+  font-family: $font-family;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -8,23 +9,23 @@
 
 .name {
   font-weight: bold;
-  margin-bottom: $s-spacer;
+  margin-bottom: $spacer;
 }
 
 .job-title {
-  margin-bottom: 2 * $s-spacer;
+  margin-bottom: 2 * $spacer;
 }
 
 .logo {
   display: block;
-  margin-bottom: 3 * $s-spacer;
+  margin-bottom: 3 * $spacer;
 }
 
 .contacts {
   list-style: none;
 
   li + li {
-    margin-top: $s-spacer;
+    margin-top: $spacer;
   }
 }
 
@@ -37,6 +38,6 @@
 
   img {
     display: block;
-    margin-right: 2 * $s-spacer;
+    margin-right: 2 * $spacer;
   }
 }
