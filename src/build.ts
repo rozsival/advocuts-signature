@@ -1,39 +1,20 @@
 import path from 'path';
-import { mkdir, readFile, writeFile } from 'fs/promises';
+import { mkdir, writeFile } from 'fs/promises';
 
 import consola from 'consola';
 import cpr from 'cpr';
-import hbs from 'handlebars';
 import inlineCss from 'inline-css';
 import { minify } from 'html-minifier';
 import { renderSync } from 'sass';
 
 import {
-  ADDRESS,
   ASSETS,
   ASSETS_DIR,
   ASSETS_PREFIX,
   BUILD_DIR,
-  CONTAINER,
-  MAP_URL,
   STYLES_DIR,
-  TEMPLATES_DIR,
-  TITLE,
 } from './constants';
-import { images } from './images';
-import { website } from './website';
-
-const getTemplateSource = (name: string) =>
-  readFile(path.join(TEMPLATES_DIR, `${name}.hbs`));
-
-const compileTemplate = async () => {
-  const source = await getTemplateSource('index');
-  const img = await getTemplateSource('img');
-  const link = await getTemplateSource('link');
-  hbs.registerPartial('img', hbs.compile(img.toString()));
-  hbs.registerPartial('link', hbs.compile(link.toString()));
-  return hbs.compile(source.toString());
-};
+import { compileTemplate, templateContext } from './utils';
 
 export const build = async (): Promise<void> => {
   consola.info('Copying assets');
@@ -43,15 +24,7 @@ export const build = async (): Promise<void> => {
   const style = renderSync({ file: styleSource });
   consola.info('Compiling template');
   const template = await compileTemplate();
-  const html = template({
-    address: ADDRESS,
-    container: CONTAINER,
-    images: images(),
-    mapUrl: MAP_URL,
-    style: style.css.toString(),
-    title: TITLE,
-    website: website(),
-  });
+  const html = template(templateContext(style.css));
   consola.info('Inlining CSS');
   const htmlWithCss = await inlineCss(html.toString(), {
     removeHtmlSelectors: true,
@@ -60,10 +33,11 @@ export const build = async (): Promise<void> => {
   });
   consola.info('Minifying output');
   const output = minify(htmlWithCss, {
-    html5: true,
-    minifyCSS: true,
     collapseInlineTagWhitespace: true,
     collapseWhitespace: true,
+    html5: true,
+    minifyCSS: true,
+    minifyJS: true,
     preserveLineBreaks: false,
   });
   await mkdir(BUILD_DIR, { recursive: true });
