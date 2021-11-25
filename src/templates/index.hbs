@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta
+		name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="robots" content="noindex,nofollow">
+	<title>{{title}}</title>
+	<style>{{{style}}}</style>
+</head>
+<body>
+<h1>{{title}}</h1>
+<p>
+	Klikněte na box níže pro označení celého podpisu, poté použijte Ctrl+C / Cmd + C pro zkopírování.
+</p>
+<div class="{{container}}" id="{{container}}" title="Click to select" onclick="selectContainer(this);">
+	<p class="name">JUDr. Jméno Příjmení</p>
+	<p class="job-title">Job Title</p>
+	{{> img class='logo' img=images.logo}}
+	<ul class="contacts">
+		{{> link href='tel:+420999888777' img=images.phone text='+420 999 888 777'}}
+		{{> link href='mailto:jmeno.prijmeni@advocuts.cz' img=images.send text='jmeno.prijmeni@advocuts.cz'}}
+		{{> link blank=true href='https://goo.gl/maps/9bu9NQn56kv9n9dY6' img=images.map text=address}}
+		{{> link blank=true href=website.href img=images.globe text=website.text}}
+	</ul>
+</div>
+<script>
+	function selectContainer (container) {
+		window.getSelection().selectAllChildren(container);
+	}
+</script>
+</body>
+</html>

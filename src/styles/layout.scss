@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html,
+body {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+body {
+  font-family: Helvetica, Arial, 'sans-serif';
+  font-size: $s-base-font;
+}
+
+.container {
+  border: 1px solid $c-border;
+  border-radius: 1em;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 2em;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 2em;
+  padding: 0 2em;
+}
