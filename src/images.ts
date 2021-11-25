@@ -5,7 +5,7 @@ import imageSize from 'image-size';
 import { ASSETS, ASSETS_PREFIX } from './constants';
 import { Image, Images } from './types';
 
-const calculateSize = (size?: number): number => size ?? 0 / 2;
+const calculateSize = (size?: number): number => (size ?? 0) / 2;
 
 const mapImage =
   (date: Date) =>
