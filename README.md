@@ -20,7 +20,8 @@ Email signature for Advocuts law firm 👨‍💼
 
 ## 👀 Preview
 
-The preview is available at [https://rozsival.github.io/advocuts-signature/](https://rozsival.github.io/advocuts-signature/).
+The preview is available
+at [https://rozsival.github.io/advocuts-signature/](https://rozsival.github.io/advocuts-signature/).
 
 ## 👨‍💻 Development
 
@@ -29,3 +30,5 @@ nvm use
 yarn install
 yarn build
 ```
+
+> See `package.json` for all available scripts.
