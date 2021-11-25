@@ -22,6 +22,7 @@ body {
 .container {
   border: 1px solid $border-color;
   border-radius: $border-radius;
+  box-shadow: 0 0 $spacer $border-color;
   box-sizing: border-box;
   cursor: pointer;
   padding: 2em;
