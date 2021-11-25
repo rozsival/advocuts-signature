@@ -11,11 +11,11 @@
     "build:compile": "ts-node -T src",
     "fix": "run-s ts lint:js:fix lint:css:fix prettier:fix",
     "lint": "run-s ts lint:js lint:css prettier",
-    "lint:css": "stylelint src/styles",
+    "lint:css": "stylelint **/*.scss",
     "lint:css:fix": "yarn lint:css --fix",
     "lint:js": "eslint --cache --ext js,ts .",
     "lint:js:fix": "yarn lint:js --fix",
-    "prettier": "prettier --check '**.{js,json,md,scss}'",
+    "prettier": "prettier --check '**/*.{js,json,md,scss}'",
     "prettier:fix": "yarn prettier --write",
     "ts": "tsc"
   },
