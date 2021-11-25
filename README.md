@@ -1,6 +1,6 @@
 <p align="center">
 <a href="http://advocuts.cz">
-<img alt="Advocuts" src="./src/assets/logo.png" width="80" />
+<img alt="Advocuts" src="./src/assets/logo.svg" width="160" />
 </a>
 </p>
 <h1 align="center">Signature</h1>
