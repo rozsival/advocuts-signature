@@ -8,7 +8,7 @@
   "scripts": {
     "build": "run-s build:clean build:compile",
     "build:clean": "rimraf build",
-    "build:compile": "ts-node -T src/index.ts",
+    "build:compile": "ts-node -T src",
     "fix": "run-s ts lint:js:fix lint:css:fix prettier:fix",
     "lint": "run-s ts lint:js lint:css prettier",
     "lint:css": "stylelint src/styles",
