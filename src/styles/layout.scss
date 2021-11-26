@@ -40,7 +40,9 @@ p {
   code {
     background: $border-color;
     border-radius: $border-radius;
-    margin: auto 0.5em;
+    display: inline-block;
+    margin: 0.25em 0.5em;
     padding: 0.5em 0.75em;
+    word-break: keep-all;
   }
 }
