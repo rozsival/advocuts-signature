@@ -23,7 +23,7 @@ Email signature for Advocuts law firm 👨‍💼
 The preview is available
 at [https://rozsival.github.io/advocuts-signature/](https://rozsival.github.io/advocuts-signature/)
 
-## 👨‍💻 Development
+## 👨‍💻 Usage
 
 ### 💾 Installation
 
