@@ -21,14 +21,31 @@ Email signature for Advocuts law firm 👨‍💼
 ## 👀 Preview
 
 The preview is available
-at [https://rozsival.github.io/advocuts-signature/](https://rozsival.github.io/advocuts-signature/).
+at [https://rozsival.github.io/advocuts-signature/](https://rozsival.github.io/advocuts-signature/)
 
 ## 👨‍💻 Development
+
+### 💾 Installation
 
 ```bash
 nvm use
 yarn install
-yarn build
 ```
 
-> See `package.json` for all available scripts.
+### ⚙️ Configuration
+
+Create `.env` from `.env.example
+
+- `ASSETS_PREFIX` = path prefix for `assets` (e.g. `https://some-remote.tld/`)
+
+### 🚨 Linters
+
+```bash
+yarn fix
+```
+
+### 📦 Build
+
+```bash
+yarn build
+```
