@@ -36,7 +36,7 @@ yarn install
 
 Create `.env` from `.env.example`
 
-- `ASSETS_PREFIX` = path prefix for `assets` (e.g. `https://some-remote.tld/`)
+- `ASSETS_PREFIX` – path prefix for `assets` (e.g. `https://some-remote.tld/`)
 
 ### 🚨 Linters
 
