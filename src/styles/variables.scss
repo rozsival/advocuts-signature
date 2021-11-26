@@ -1,5 +1,10 @@
 $border-color: #fef;
 $border-radius: 1em;
 $font-family: Helvetica, Arial, 'sans-serif';
-$font-size: 14px;
 $spacer: 8px;
+$text-color: #070038;
+$font-sizes: (
+  'base': 14px,
+  'normal': 12px,
+  'small': 10px,
+);

@@ -16,7 +16,7 @@ body {
 
 body {
   font-family: $font-family;
-  font-size: $font-size;
+  font-size: map-get($font-sizes, 'base');
 }
 
 .container {

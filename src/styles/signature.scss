@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .name,
 .job-title,
 .contacts {
@@ -7,9 +9,23 @@
   text-align: left;
 }
 
+.name,
+.job-title,
+.contacts-link {
+  color: $text-color;
+}
+
+.job-title,
+.contacts-link {
+  font-size: map-get($font-sizes, 'small');
+  line-height: map-get($font-sizes, 'normal');
+}
+
 .name {
+  font-size: map-get($font-sizes, 'normal');
   font-weight: bold;
-  margin-bottom: $spacer;
+  line-height: map-get($font-sizes, 'base');
+  margin-bottom: math.div($spacer, 2);
 }
 
 .job-title {
@@ -18,7 +34,7 @@
 
 .logo {
   display: block;
-  margin-bottom: 3 * $spacer;
+  margin-bottom: 2 * $spacer;
 }
 
 .contacts {
@@ -38,6 +54,6 @@
 
   img {
     display: block;
-    margin-right: 2 * $spacer;
+    margin-right: $spacer;
   }
 }
