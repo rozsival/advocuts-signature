@@ -48,8 +48,8 @@
   }
 
   a {
-    color: $text-color;
-    text-decoration: none;
+    color: $text-color !important;
+    text-decoration: none !important;
   }
 
   img {
