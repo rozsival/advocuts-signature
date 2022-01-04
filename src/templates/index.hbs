@@ -16,8 +16,8 @@
 	<style>{{{style}}}</style>
 </head>
 <body>
-<h1>{{icon}} {{title}}</h1>
-<p>
+<h1 class="heading">{{icon}} {{title}}</h1>
+<p class="text">
 	Klikněte na box níže pro označení celého podpisu, poté použijte
 	<code>🪟 Ctrl+C</code>&nbsp;/&nbsp;<code>🍏 Cmd+C</code>
 	pro zkopírování.
@@ -26,12 +26,10 @@
 	<p class="name">JUDr. Jméno Příjmení</p>
 	<p class="job-title">Job Title</p>
 	{{> img class='logo' img=images.logo}}
-	<ul class="contacts">
-		{{> link href='tel:+420999888777' img=images.phone text='+420 999 888 777'}}
-		{{> link href='mailto:jmeno.prijmeni@advocuts.cz' img=images.send text='jmeno.prijmeni@advocuts.cz'}}
-		{{> link blank=true href='https://goo.gl/maps/9bu9NQn56kv9n9dY6' img=images.map text=address}}
-		{{> link blank=true href=website.href img=images.globe text=website.text}}
-	</ul>
+	{{> contact href='tel:+420999888777' img=images.phone text='+420 999 888 777'}}
+	{{> contact href='mailto:jmeno.prijmeni@advocuts.cz' img=images.send text='jmeno.prijmeni@advocuts.cz'}}
+	{{> contact blank=true href='https://goo.gl/maps/9bu9NQn56kv9n9dY6' img=images.map text=address}}
+	{{> contact blank=true href=website.href img=images.globe text=website.text}}
 </div>
 <script>
 	function selectContainer(container) {

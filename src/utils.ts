@@ -19,10 +19,10 @@ const readTemplate = (name: string) =>
 
 export const compileTemplate = async () => {
   const source = await readTemplate('index');
+  const contact = await readTemplate('contact');
   const img = await readTemplate('img');
-  const link = await readTemplate('link');
+  hbs.registerPartial('contact', hbs.compile(contact.toString()));
   hbs.registerPartial('img', hbs.compile(img.toString()));
-  hbs.registerPartial('link', hbs.compile(link.toString()));
   return hbs.compile(source.toString());
 };
 

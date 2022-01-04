@@ -2,7 +2,7 @@
 
 .name,
 .job-title,
-.contacts {
+.contact {
   font-family: $font-family;
   margin: 0;
   padding: 0;
@@ -11,12 +11,12 @@
 
 .name,
 .job-title,
-.contacts-link {
+.contact {
   color: $text-color;
 }
 
 .job-title,
-.contacts-link {
+.contact {
   font-size: map-get($font-sizes, 'small');
   line-height: map-get($font-sizes, 'normal');
 }
@@ -37,20 +37,20 @@
   margin-bottom: 2 * $spacer;
 }
 
-.contacts {
-  list-style: none;
-
-  li + li {
-    margin-top: $spacer;
-  }
-}
-
-.contacts-link {
+.contact {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  text-decoration: none;
+
+  & + & {
+    margin-top: $spacer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   img {
     display: block;
