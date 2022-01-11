@@ -1,11 +1,11 @@
 import path from 'path';
 
-export const ADDRESS = 'Vodičkova 791/39, Praha 1, 110 00';
+export const ADDRESS = 'City Element, Na Strži 2102/61a, 140 00 Praha 4';
 export const ASSETS = 'assets';
 export const ASSETS_PREFIX = process.env.ASSETS_PREFIX ?? '';
 export const CONTAINER = 'container';
 export const ICON = '✍️';
-export const MAP_URL = 'https://goo.gl/maps/9bu9NQn56kv9n9dY6';
+export const MAP_URL = 'https://goo.gl/maps/Uom253HsEe4pysyS7';
 export const TITLE = 'Advocuts Signature';
 export const WEBSITE = 'http://advocuts.cz';
 

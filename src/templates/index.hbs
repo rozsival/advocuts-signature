@@ -22,14 +22,18 @@
 	<code>🪟 Ctrl+C</code>&nbsp;/&nbsp;<code>🍏 Cmd+C</code>
 	pro zkopírování.
 </p>
-<div class="{{container}}" id="{{container}}" title="Click to select" onclick="selectContainer(this);">
-	<p class="name">JUDr. Jméno Příjmení</p>
-	<p class="job-title">Job Title</p>
-	{{> img class='logo' img=images.logo}}
-	{{> contact href='tel:+420999888777' img=images.phone text='+420 999 888 777'}}
-	{{> contact href='mailto:jmeno.prijmeni@advocuts.cz' img=images.send text='jmeno.prijmeni@advocuts.cz'}}
-	{{> contact blank=true href='https://goo.gl/maps/9bu9NQn56kv9n9dY6' img=images.map text=address}}
-	{{> contact blank=true href=website.href img=images.globe text=website.text}}
+<div class="signatures">
+	{{#each people}}
+		<div class="{{../container}}" title="Click to select" onclick="selectContainer(this);">
+			<p class="name">{{this.name}}</p>
+			<p class="job-title">{{this.title}}</p>
+			{{> img class='logo' img=../images.logo}}
+			{{> contact href=this.phone.href img=../images.phone text=this.phone.text}}
+			{{> contact href=this.email.href img=../images.send text=this.email.text}}
+			{{> contact blank=true href=../mapUrl img=../images.map text=../address}}
+			{{> contact blank=true href=../website.href img=../images.globe text=../website.text}}
+		</div>
+	{{/each}}
 </div>
 <script>
 	function selectContainer(container) {

@@ -32,6 +32,32 @@ export const templateContext = (css: Buffer) => ({
   icon: ICON,
   images: images(),
   mapUrl: MAP_URL,
+  people: [
+    {
+      name: 'JUDr. Martin Solil',
+      title: 'Advokát / Společník',
+      email: {
+        href: 'mailto:solil@advocuts.cz',
+        text: 'solil@advocuts.cz',
+      },
+      phone: {
+        href: 'tel:+420721502972',
+        text: '+420 721 502 972',
+      },
+    },
+    {
+      name: 'Mgr. Zdeněk Horák',
+      title: 'Advokát / Společník',
+      email: {
+        href: 'mailto:horak@advocuts.cz',
+        text: 'horak@advocuts.cz',
+      },
+      phone: {
+        href: 'tel:+420724996997',
+        text: '+420 724 996 997',
+      },
+    },
+  ],
   style: css.toString(),
   title: TITLE,
   website: website(),

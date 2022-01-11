@@ -46,3 +46,13 @@ body {
     word-break: keep-all;
   }
 }
+
+.signatures {
+  display: flex;
+  flex-flow: row wrap;
+
+  .container {
+    flex: 1 1 auto;
+    margin: $spacer;
+  }
+}
